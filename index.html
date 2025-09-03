@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="calculator-section">
+      <div class="logo-container">
+        <img src="./logo.svg" alt="Logo" />
+      </div>
+
+      <form class="calculator-form">
+        <div class="input-calculator-form">
+          <!--------bil-->
+          <div class="input-group">
+            <div class="label-container">
+              <label class="standard-label" for="bill">Bil</label>
+              <p class="standard-input-error hide bill-input-error">
+                Must be greater than 0
+              </p>
+            </div>
+            <div class="input-container">
+              <input
+                class="standard-input with-left-side-icon"
+                type="number"
+                name="bill"
+                id="bill"
+                placeholder="0"
+              />
+              <img
+                class="left-side-icon"
+                src="./icon-dollar.svg"
+                alt="Dollar Icon"
+              />
+            </div>
+          </div>
+
+          <!---------------tip---------------- -->
+          <div class="tips-container">
+            <div class="label-container">
+              <label class="standard-label">Select Tips %</label>
+              <p class="standard-input-error hide custom-tip-input-error">
+                Must be equal or greater than 0
+              </p>
+            </div>
+            <div class="tip-buttons-container">
+              <button class="tip-button" type="button">5%</button>
+              <button class="tip-button" type="button">10%</button>
+              <button class="tip-button" type="button">15%</button>
+              <button class="tip-button" type="button">25%</button>
+              <button class="tip-button" type="button">50%</button>
+              <input
+                class="standard-input"
+                type="number"
+                name="custom-tip"
+                id="custom-tip"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+
+          <!-- ---------------number of people--------------------- -->
+          <div class="input-group">
+            <div class="label-container">
+              <label class="standard-label" for="number-of-people"
+                >Number of People</label
+              >
+              <p class="standard-input-error hide people-input-error">
+                Must be greater than 0
+              </p>
+            </div>
+            <div class="input-container">
+              <input
+                class="standard-input with-left-side-icon"
+                type="number"
+                name="number-of-people"
+                id="number-of-people"
+                placeholder="0"
+              />
+              <img
+                class="left-side-icon"
+                src="./icon-person.svg"
+                alt="Person Icon"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="calculate-button">CALCULATE</button>
+        </div>
+
+        <!-------------------output------------------->
+        <div class="output-calculator-form">
+          <div class="output-card">
+            <div class="total-amount-description">
+              <p class="heading-of-total">
+                Tip Amount <br /><span>/ person</span>
+              </p>
+              <p class="tip-amount-person">$0.00</p>
+            </div>
+            <div class="total-amount-description">
+              <p class="heading-of-total">Total <br /><span>/ person</span></p>
+              <p class="total-amount-person">$0.00</p>
+            </div>
+          </div>
+          <button class="reset-button" type="button">RESET</button>
+        </div>
+      </form>
+    </section>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
